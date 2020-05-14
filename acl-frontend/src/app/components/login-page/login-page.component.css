@@ -1,0 +1,23 @@
+.dev {
+  color: #FFFFFF;
+  font-family: bold;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 66px;
+}
+.header {
+  color: #000000;
+  font-family: bold;
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0;
+}
+.loginButton{
+  padding: 0 25px;
+  background-color: black;
+}
+.loginError{
+  font-family: Roboto;
+  font-size: 12px;
+  color: #f44336;
+}

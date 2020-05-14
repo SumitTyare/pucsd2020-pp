@@ -1,0 +1,30 @@
+<div>
+  <div style="width: 100%;height: 97vh;" fxLayout="row">
+    <section fxFlex="50" fxLayout="column" fxLayoutAlign="center center" style="background-color:black;">
+      <p class="dev"> ACL </p>
+    </section>
+    <section fxFlex="50" fxLayout="column" fxLayoutGap="60px" fxLayoutAlign="center center">
+      <div class="login-data" fxLayout="column">
+        <p class="header" style="margin-bottom:85px; margin-left:30%">Login</p>
+
+        <form [formGroup]="loginForm" (keyup.enter)="login()">
+          <div fxLayout="column" fxLayoutGap="49px" style="position:relative">
+            <mat-form-field style="width: 100%;">
+              Enter UserName: <input matInput formControlName="username" [(ngModel)]="userName" placeholder="User Name">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+              Enter Password :  <input matInput type="password"  formControlName="password" [(ngModel)]="userpass" placeholder="Password">
+            </mat-form-field>
+          </div>
+        </form>
+        <div style="margin-top: 10%;margin-left: 20%;">
+          <p *ngIf="invalidLogin" class="loginError"> Email or password is incorrect </p>
+        </div>
+
+        <div style="margin-top:10%; margin-left:30%">
+          <button style="color: white;" class="loginButton" mat-raised-button (click)="login()" >Login</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
